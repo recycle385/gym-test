@@ -48,6 +48,7 @@ class ApiRepository {
 
 
   Future<String> zeroKnowledgeHmac(String challengeCode) async {
+    print('DEBUG: Requesting to $baseUrl/verify/key');
     final response = await http.post(
       Uri.parse('$baseUrl/verify/key'),
       body: {'d': challengeCode},

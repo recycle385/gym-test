@@ -52,7 +52,7 @@ class _FinalResultState extends State<FinalResultStep>
       body: Center(
         child: Column(
           children: [
-            const SizedBox(height: 100),
+            const SizedBox(height: 250),
             if (_flipAnimation != null)
               AnimatedBuilder(
                 animation: _flipAnimation!,
@@ -66,7 +66,7 @@ class _FinalResultState extends State<FinalResultStep>
                   );
                 },
                 child: SvgPicture.asset(
-                  'assets/images/verified.svg',
+                  widget.viewModel.isRegistered ? 'assets/icons/partyPopper.svg': 'assets/images/verified.svg',
                   colorFilter: ColorFilter.mode(
                     widget.viewModel.isRegistered
                         ? CustomColors.primaryColor
@@ -74,7 +74,7 @@ class _FinalResultState extends State<FinalResultStep>
                     BlendMode.srcIn,
                   ),
                   fit: BoxFit.contain,
-                  width: 200,
+                  width: widget.viewModel.isRegistered ? 50 : 200,
                 ),
               ),
             const SizedBox(height: 30),

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gym_credit_capstone/view_models/find_password_view_model.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
+import 'package:gym_credit_capstone/style/custom_colors.dart';
 import 'package:gym_credit_capstone/views/common_widgets/input_section.dart';
 import 'package:gym_credit_capstone/views/common_widgets/CustomInputLine.dart';
 
@@ -19,6 +21,15 @@ class SendResetEmail extends StatelessWidget {
         child: Column(
           children: [
             const SizedBox(height: 300),
+            SvgPicture.asset(
+              'assets/icons/plane_paper.svg',
+              colorFilter: ColorFilter.mode(
+                CustomColors.primaryColor,
+                BlendMode.srcIn,
+              ),
+              width: 50,
+            ),
+            const SizedBox(height: 30),
             Text(
               '메일을 보냈습니다.',
               style: TextStyle(

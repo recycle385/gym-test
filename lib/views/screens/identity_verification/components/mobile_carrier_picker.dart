@@ -100,7 +100,6 @@ class MobileCarrierPicker extends StatelessWidget {
                   return Text(carrier, style: TextStyle());
             }).toList(),
           ),*/
-            Text('알뜰폰 사업자 목록'),
           ],
         ),
       );}
