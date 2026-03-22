@@ -32,7 +32,10 @@ migrate_working_dir/
 .pub-cache/
 .pub/
 /build/
+node_modules/
 
+firebase.json
+lib/firebase_options.dart
 # Symbolication related
 app.*.symbols
 
@@ -43,3 +46,20 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+/android/app/google-services.json
+
+# Environment variables / Secrets
+.env*
+*-local
+*.jks
+*.keystore
+*.pub
+*.pem
+
+# iOS Firebase Config
+ios/Runner/GoogleService-Info.plist
+
+# macOS temporary files
+.AppleDouble
+.LSOverride
+._*
